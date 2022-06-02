@@ -4,7 +4,7 @@
       <div class="col-12 text-center">
         <h3 class="pt-3">Our Categories</h3>
         <router-link :to="{ name: 'AddCategory' }">
-          <button class="btn" style="float:right">Add Category</button>
+          <button class="btn" style="float: right">Add Category</button>
         </router-link>
       </div>
     </div>
@@ -27,14 +27,14 @@ export default {
   components: { CategoryBox },
   data() {
     return {
-     baseURL: 'https://ecommerce-swagger.herokuapp.com',
-     categories: [],
+      baseURL: "https://ecommerce-swagger.herokuapp.com",
+      categories: [],
     };
   },
   methods: {
     async getCategories() {
       await axios
-        .get(`${this.baseURL}/category`)
+        .get(`${this.baseURL}/category/`)
         .then((res) => (this.categories = res.data))
         .catch((err) => console.log(err));
     },
