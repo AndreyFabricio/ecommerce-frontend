@@ -24,8 +24,8 @@ const routes = [
   },
   {
     path: '/admin/category',
-    name: 'CategoryView',
-    component: CategoryView
+      name: 'CategoryView',
+      component: CategoryView
   }
 ]
 
